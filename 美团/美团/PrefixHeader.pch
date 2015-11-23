@@ -4,7 +4,7 @@
 //
 //  Created by 郑雨鑫 on 15/11/21.
 //  Copyright © 2015年 郑雨鑫. All rights reserved.
-//
+//  5ba88d3d046afb5672bf0edcfba8c947
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
@@ -24,12 +24,14 @@
 //通知中心
 #define NotificationCenter  [NSNotificationCenter defaultCenter]
 
+//屏幕宽度
+#define ScreenW     [UIScreen mainScreen].bounds.size.width
 
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+Extension.h"
 #import "UIImage+Extension.h"
-//屏幕宽度
-#define ScreenW     [UIScreen mainScreen].bounds.size.width
+#import "NSString+Extension.h"
+
 
 
 #endif /* PrefixHeader_pch */

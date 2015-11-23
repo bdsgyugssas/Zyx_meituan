@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MTMainTabController.h"
+#import "MTLocationTool.h"
 
 @interface AppDelegate ()
 
@@ -19,13 +20,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    MTLocationTool *tool=[MTLocationTool sharedLocationTool];
+    [tool startLocation];
+    
     UIWindow *window=[[UIWindow alloc]init];
     window.frame=[UIScreen mainScreen].bounds;
     self.window=window;
     MTMainTabController *mainController=[[MTMainTabController alloc]init];
     self.window.rootViewController=mainController;
-    
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

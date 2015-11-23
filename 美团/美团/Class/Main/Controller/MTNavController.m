@@ -14,13 +14,7 @@
 
 @implementation MTNavController
 
-+ (void)initialize
-{
- 
-    UINavigationBar *bar=[UINavigationBar appearance];
-    [bar setBackgroundImage:[UIImage imageWithColor:navigationBarColor] forBarMetrics:UIBarMetricsDefault];
-    
-}
+
 
 /*
 #pragma mark - Navigation

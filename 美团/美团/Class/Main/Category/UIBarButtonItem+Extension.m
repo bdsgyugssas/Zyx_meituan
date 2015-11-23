@@ -16,8 +16,8 @@
     UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:highlightedImage] forState:UIControlStateHighlighted];
-    button.size=button.currentImage.size;
-
+    button.size=CGSizeMake(25, 25);
+    
     UIBarButtonItem *barButtonItem=[[UIBarButtonItem alloc]initWithCustomView:button];
     return barButtonItem;
 
