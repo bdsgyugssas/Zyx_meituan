@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol MTCityControllerdelegate <NSObject>
+
+- (void)loadingCityData:(NSString *)city;
+
+@end
+
 @interface MTCityController : UITableViewController
+
+@property (weak, nonatomic) id <MTCityControllerdelegate>delegate;
 
 @end

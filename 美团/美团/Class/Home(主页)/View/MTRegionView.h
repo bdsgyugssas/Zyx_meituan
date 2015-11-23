@@ -10,4 +10,7 @@
 
 @interface MTRegionView : UIScrollView
 
+@property (strong, nonatomic) NSArray *regions;
+
+
 @end

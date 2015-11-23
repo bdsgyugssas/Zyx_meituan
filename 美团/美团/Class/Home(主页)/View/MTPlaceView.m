@@ -9,6 +9,7 @@
 #import "MTPlaceView.h"
 #import "MTRegionView.h"
 #import "MTCurrentCity.h"
+#import "MTCityRegion.h"
 
 @interface MTPlaceView ()
 
@@ -44,7 +45,7 @@
         
         //加载区域视图
         MTRegionView *scrollView=[[MTRegionView alloc]init];
-        scrollView.backgroundColor=RandomColor;
+        scrollView.backgroundColor=[UIColor grayColor];
         [self addSubview:scrollView];
         self.regionView=scrollView;
         
@@ -55,6 +56,17 @@
         
     }
     return self;
+
+}
+
+- (void)setCityRegion:(MTCityRegion *)cityRegion
+{
+    _cityRegion=cityRegion;
+    
+    self.regionView.regions=cityRegion.regions;
+    
+    self.currentCity.name=cityRegion.name;
+    
 
 }
 

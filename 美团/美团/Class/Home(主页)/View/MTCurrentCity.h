@@ -12,6 +12,7 @@
 
 @interface MTCurrentCity : UIView
 
+@property (copy, nonatomic) NSString *name;
 
 
 @end

@@ -10,19 +10,31 @@
 #import "MTCityGroup.h"
 #import "MJExtension.h"
 #import "MTHotCell.h"
+#import "MTCityGroupF.h"
+#import "MTCityRegion.h"
 
 
 @interface MTCityController ()
 
 @property (strong, nonatomic) NSArray *cityGroups;
 
+@property (strong, nonatomic) MTCityGroupF *cityGroupF;
+
+
+
+
 
 @end
 
 @implementation MTCityController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [NotificationCenter addObserver:self selector:@selector(returnBack) name:@"hotCityClick" object:nil];
 
     [self setupNav];
     
@@ -30,17 +42,26 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-
+- (void)dealloc
+{
+    [NotificationCenter removeObserver:self];
 }
 #pragma mark -私有方法
+/**
+ *  获得城市列表
+ */
 - (void)achieveData
 {
     NSString *cityGroupsPath=[[NSBundle mainBundle] pathForResource:@"cityGroups" ofType:@"plist"];
     NSArray *allGroups=[NSArray arrayWithContentsOfFile:cityGroupsPath];
     self.cityGroups=[MTCityGroup mj_objectArrayWithKeyValuesArray:allGroups];
+    
 
+    
+    MTCityGroup *gruop=self.cityGroups[0];
+    MTCityGroupF *F=[[MTCityGroupF alloc]init];
+    F.cityGroup=gruop;
+    self.cityGroupF=F;
 }
 /**
  *  设置导航栏
@@ -59,6 +80,7 @@
 }
 
 #pragma mark -监听方法
+
 - (void)returnBack
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -86,14 +108,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier1=@"Cell";
-    static NSString *identifier2=@"SpecialCell";
 
     if (indexPath.section==0) {
-        MTHotCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier2];
-        if (cell==nil) {
-            cell=[[MTHotCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier2];
-        }
-        
+        MTHotCell *cell=[MTHotCell cellWithTableView:tableView];
+        cell.hotCities=((MTCityGroup *)self.cityGroups[0]).cities;
+        cell.cityGroupF=self.cityGroupF;
         return cell;
     }else {
 
@@ -115,8 +134,35 @@
     return group.title;
 }
 #pragma mark -Table view delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+    if (indexPath.section==0) {
+        return self.cityGroupF.cellH;
+    }else{
+        return 44;
+    }
+    
 
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    if (indexPath.section!=0) {
+        NSString *city=nil;
+        MTCityGroup *cityGroup=self.cityGroups[indexPath.section];
+        city=cityGroup.cities[indexPath.row];
+
+        if ([self.delegate respondsToSelector:@selector(loadingCityData:)]) {
+        [self.delegate loadingCityData:city];
+        }
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

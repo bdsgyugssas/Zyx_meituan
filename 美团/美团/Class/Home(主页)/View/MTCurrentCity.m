@@ -24,14 +24,24 @@
     self=[super initWithFrame:frame];
     
     if (self) {
-        self.backgroundColor=[UIColor redColor];
+        self.backgroundColor=RGB(180, 180, 180);
         UIButton *button=[[UIButton alloc]init];
-        button.backgroundColor=RandomColor;
+        button.backgroundColor=[UIColor whiteColor];
         [button addTarget:self action:@selector(switchCity) forControlEvents:UIControlEventTouchUpInside];
+        [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [self addSubview:button];
         self.button=button;
     }
     return self;
+}
+
+- (void)setName:(NSString *)name
+{
+    _name=name;
+    
+    NSString *str=[NSString stringWithFormat:@"当前城市:%@",name];
+    [self.button setTitle:str forState:UIControlStateNormal];
+
 }
 
 - (void)layoutSubviews

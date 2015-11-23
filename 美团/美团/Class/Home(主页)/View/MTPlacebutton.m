@@ -15,9 +15,11 @@
     self=[super initWithFrame:frame];
     if (self) {
 
-        [self setImage:[UIImage imageNamed:@"icon_homepage_downArrow"] forState:UIControlStateNormal];
-        
-
+        [self setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
+        self.width=100;
+        self.height=self.currentImage.size.height;
+ 
     }
     return self;
 
@@ -28,14 +30,22 @@
     _place=place;
     
     [self setTitle:place forState:UIControlStateNormal];
+
+}
+
+-(void)setTitle:(NSString *)title forState:(UIControlState)state
+{
+    [super setTitle:title forState:state];
+    [self sizeToFit];
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+
+    self.titleLabel.x=self.imageView.x;
+    self.imageView.x=CGRectGetMaxX(self.titleLabel.frame);
     
-    self.height=30;
-    self.width=30;
 
 }
 

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MTCityRegion;
 
 @interface MTPlaceView : UIView
 
 + (instancetype)placeView;
 
+@property (strong, nonatomic) MTCityRegion *cityRegion;
 
 
 @end

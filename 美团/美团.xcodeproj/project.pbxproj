@@ -151,6 +151,12 @@
 		2BB099311C00AB2E004CE909 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB099251C00AB2E004CE909 /* NSObject+MJProperty.m */; };
 		2BB099321C00AB2E004CE909 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB099271C00AB2E004CE909 /* NSString+MJExtension.m */; };
 		2BB099351C00AF0E004CE909 /* MTHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB099341C00AF0E004CE909 /* MTHotCell.m */; };
+		2BB099381C00E2B9004CE909 /* MTCityGroupF.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB099371C00E2B9004CE909 /* MTCityGroupF.m */; };
+		2BB0993A1C01A6E8004CE909 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BB099391C01A6E8004CE909 /* cities.plist */; };
+		2BB0993D1C01A745004CE909 /* MTCityRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0993C1C01A745004CE909 /* MTCityRegion.m */; };
+		2BB099401C01D51B004CE909 /* MTHomeCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0993F1C01D51B004CE909 /* MTHomeCategoryViewCell.m */; };
+		2BB099431C01EA4D004CE909 /* MTOnePageCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB099421C01EA4D004CE909 /* MTOnePageCategoryView.m */; };
+		2BB099461C01F3B7004CE909 /* MTCagetoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB099451C01F3B7004CE909 /* MTCagetoryButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,6 +355,17 @@
 		2BB099271C00AB2E004CE909 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		2BB099331C00AF0E004CE909 /* MTHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHotCell.h; sourceTree = "<group>"; };
 		2BB099341C00AF0E004CE909 /* MTHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHotCell.m; sourceTree = "<group>"; };
+		2BB099361C00E2B9004CE909 /* MTCityGroupF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCityGroupF.h; sourceTree = "<group>"; };
+		2BB099371C00E2B9004CE909 /* MTCityGroupF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCityGroupF.m; sourceTree = "<group>"; };
+		2BB099391C01A6E8004CE909 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		2BB0993B1C01A745004CE909 /* MTCityRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCityRegion.h; sourceTree = "<group>"; };
+		2BB0993C1C01A745004CE909 /* MTCityRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCityRegion.m; sourceTree = "<group>"; };
+		2BB0993E1C01D51B004CE909 /* MTHomeCategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeCategoryViewCell.h; sourceTree = "<group>"; };
+		2BB0993F1C01D51B004CE909 /* MTHomeCategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeCategoryViewCell.m; sourceTree = "<group>"; };
+		2BB099411C01EA4D004CE909 /* MTOnePageCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTOnePageCategoryView.h; sourceTree = "<group>"; };
+		2BB099421C01EA4D004CE909 /* MTOnePageCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTOnePageCategoryView.m; sourceTree = "<group>"; };
+		2BB099441C01F3B7004CE909 /* MTCagetoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCagetoryButton.h; sourceTree = "<group>"; };
+		2BB099451C01F3B7004CE909 /* MTCagetoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCagetoryButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +428,7 @@
 				2BB097C21C003883004CE909 /* Resource */,
 				2BB097A01C003367004CE909 /* Info.plist */,
 				2BB097901C003366004CE909 /* main.m */,
+				2BB099391C01A6E8004CE909 /* cities.plist */,
 				2BB099071C00A904004CE909 /* cityGroups.plist */,
 				2BB0979B1C003366004CE909 /* Assets.xcassets */,
 				2BB098E31C004B0C004CE909 /* PrefixHeader.pch */,
@@ -686,6 +704,10 @@
 				2BB0990A1C00AA23004CE909 /* City.m */,
 				2BB0990C1C00AA87004CE909 /* MTCityGroup.h */,
 				2BB0990D1C00AA87004CE909 /* MTCityGroup.m */,
+				2BB099361C00E2B9004CE909 /* MTCityGroupF.h */,
+				2BB099371C00E2B9004CE909 /* MTCityGroupF.m */,
+				2BB0993B1C01A745004CE909 /* MTCityRegion.h */,
+				2BB0993C1C01A745004CE909 /* MTCityRegion.m */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -703,6 +725,12 @@
 				2BB098F71C006E1B004CE909 /* MTCurrentCity.m */,
 				2BB099331C00AF0E004CE909 /* MTHotCell.h */,
 				2BB099341C00AF0E004CE909 /* MTHotCell.m */,
+				2BB0993E1C01D51B004CE909 /* MTHomeCategoryViewCell.h */,
+				2BB0993F1C01D51B004CE909 /* MTHomeCategoryViewCell.m */,
+				2BB099411C01EA4D004CE909 /* MTOnePageCategoryView.h */,
+				2BB099421C01EA4D004CE909 /* MTOnePageCategoryView.m */,
+				2BB099441C01F3B7004CE909 /* MTCagetoryButton.h */,
+				2BB099451C01F3B7004CE909 /* MTCagetoryButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -903,6 +931,7 @@
 				2BB0986E1C003883004CE909 /* icon_merchant_location.png in Resources */,
 				2BB0986C1C003883004CE909 /* icon_map.png in Resources */,
 				2BB098461C003883004CE909 /* icon_homepage_KTVCategory.png in Resources */,
+				2BB0993A1C01A6E8004CE909 /* cities.plist in Resources */,
 				2BB0987E1C003883004CE909 /* icon_mine_dailyRecommend_tips@2x.png in Resources */,
 				2BB098741C003883004CE909 /* icon_search_selected_old.png in Resources */,
 				2BB098591C003883004CE909 /* icon_map_cateid_2.png in Resources */,
@@ -1019,14 +1048,18 @@
 				2BB0990E1C00AA87004CE909 /* MTCityGroup.m in Sources */,
 				2BB099321C00AB2E004CE909 /* NSString+MJExtension.m in Sources */,
 				2BB098D61C003CB1004CE909 /* MTMainTabController.m in Sources */,
+				2BB099461C01F3B7004CE909 /* MTCagetoryButton.m in Sources */,
 				2BB0992C1C00AB2E004CE909 /* MJPropertyKey.m in Sources */,
 				2BB098F81C006E1B004CE909 /* MTCurrentCity.m in Sources */,
+				2BB099381C00E2B9004CE909 /* MTCityGroupF.m in Sources */,
 				2BB098D71C003CB1004CE909 /* AppDelegate.m in Sources */,
 				2BB099351C00AF0E004CE909 /* MTHotCell.m in Sources */,
 				2BB098DD1C004219004CE909 /* MTHomeController.m in Sources */,
 				2BB098E11C0048B6004CE909 /* UIBarButtonItem+Extension.m in Sources */,
 				2BB099311C00AB2E004CE909 /* NSObject+MJProperty.m in Sources */,
 				2BB0992D1C00AB2E004CE909 /* MJPropertyType.m in Sources */,
+				2BB099431C01EA4D004CE909 /* MTOnePageCategoryView.m in Sources */,
+				2BB0993D1C01A745004CE909 /* MTCityRegion.m in Sources */,
 				2BB098EF1C005923004CE909 /* UIImage+Extension.m in Sources */,
 				2BB098F51C006479004CE909 /* MTRegionView.m in Sources */,
 				2BB098F21C00609A004CE909 /* MTPlaceView.m in Sources */,
@@ -1037,6 +1070,7 @@
 				2BB098FF1C009B0F004CE909 /* MTCityController.m in Sources */,
 				2BB0990B1C00AA23004CE909 /* City.m in Sources */,
 				2BB098E91C005226004CE909 /* MTPlacebutton.m in Sources */,
+				2BB099401C01D51B004CE909 /* MTHomeCategoryViewCell.m in Sources */,
 				2BB099281C00AB2E004CE909 /* MJDictionaryCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
