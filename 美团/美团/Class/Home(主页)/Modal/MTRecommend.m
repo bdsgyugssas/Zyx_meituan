@@ -7,6 +7,8 @@
 //
 
 #import "MTRecommend.h"
+#import <CoreLocation/CoreLocation.h>
+#import "MTLocationManager.h"
 
 @implementation MTRecommend
 
@@ -17,4 +19,19 @@
     _squareimgurl=str;
 }
 
+
+- (double)distance
+{
+    NSString *mlls=self.mlls;
+    NSRange range;
+    range=[mlls rangeOfString:@","];
+    NSString *lat=[mlls substringToIndex:range.location];
+    NSString *lng=[mlls substringFromIndex:range.location+range.length];
+    
+    CLLocation *locaton=[[CLLocation alloc]initWithLatitude:lat.doubleValue longitude:lng.doubleValue];
+    
+    return  [locaton distanceFromLocation:[MTLocationManager locationManager].location]/1000;
+    
+
+}
 @end

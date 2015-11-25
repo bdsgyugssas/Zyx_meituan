@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class CLLocation;
 @interface MTLocationManager : NSObject
 
++ (MTLocationManager *)locationManager;
+
 -(void)start;
+
+@property (strong, nonatomic) CLLocation *location;
 
 @end

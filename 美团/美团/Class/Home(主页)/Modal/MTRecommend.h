@@ -25,6 +25,8 @@
 @property (assign,nonatomic) long long solds;
 /** 坐标  */
 @property (copy,nonatomic) NSString *mlls;
+/** 距离  */
+@property (assign,nonatomic) double distance;
 
 
 

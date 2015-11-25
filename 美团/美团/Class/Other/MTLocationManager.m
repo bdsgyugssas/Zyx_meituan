@@ -17,6 +17,29 @@
 
 @implementation MTLocationManager
 
+static id mtlocationManager;
+
++ (MTLocationManager *)locationManager
+{
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+       mtlocationManager=[[self alloc]init];
+    });
+    return mtlocationManager;
+
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        mtlocationManager=[super allocWithZone:zone];
+    });
+    return mtlocationManager;
+}
+
+
 - (void)start
 {
     NSLog(@"%d",[CLLocationManager locationServicesEnabled]);
@@ -65,9 +88,8 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
-    CLLocation *location=[locations  lastObject];
+//    self.location=[locations  lastObject];
+    self.location=[[CLLocation alloc]initWithLatitude:Lat longitude:Lng];
     
-    NSLog(@"%f,%f",location.coordinate.latitude,location.coordinate.longitude);
-
 }
 @end

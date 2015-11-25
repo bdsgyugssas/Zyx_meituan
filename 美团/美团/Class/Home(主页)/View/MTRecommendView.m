@@ -10,6 +10,7 @@
 #import "MTRecommend.h"
 #import "UIImageView+WebCache.h"
 
+
 @interface MTRecommendView ()
 @property (weak, nonatomic) IBOutlet UIImageView *squareimgurl;
 @property (weak, nonatomic) IBOutlet UILabel *mnameLabel;
@@ -49,6 +50,14 @@
     
     self.pieceLabel.text=[NSString stringWithFormat:@"￥%.1f",shop.price];
     self.pieceLabel.textColor=navigationBarColor;
+    
+
+
+    self.distanceLabel.text=[NSString stringWithFormat:@"%.1fKm",shop.distance];
+    self.distanceLabel.textColor=RGB(200, 200, 200);
+    self.distanceLabel.font=[UIFont systemFontOfSize:12];
+
+
 
 
 }

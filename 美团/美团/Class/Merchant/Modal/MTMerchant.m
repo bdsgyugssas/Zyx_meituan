@@ -7,10 +7,19 @@
 //
 
 #import "MTMerchant.h"
+#import "MTLocationManager.h"
+#import <CoreLocation/CoreLocation.h>
 
 
 @implementation MTMerchant
 
+- (double)distance
+{
+    
+    CLLocation *location=[[CLLocation alloc]initWithLatitude:self.lat longitude:self.lng];
+    CLLocationDistance distanceF=[location distanceFromLocation:[MTLocationManager locationManager].location];
+    return distanceF/1000;
 
+}
 
 @end

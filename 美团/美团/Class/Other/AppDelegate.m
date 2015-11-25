@@ -23,7 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    MTLocationManager *manager=[[MTLocationManager alloc]init];
+    MTLocationManager *manager=[MTLocationManager locationManager];
     [manager start];
     self.manager=manager;
     
