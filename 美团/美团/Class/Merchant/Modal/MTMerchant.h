@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+
 @interface MTMerchant : NSObject
 /**
  *  商家的名字
@@ -45,5 +48,9 @@
  *  商家距离
  */
 @property (assign,nonatomic) double distance;
+/**
+ *  商家地址
+ */
+@property (copy,nonatomic) NSString *addr;
 
 @end

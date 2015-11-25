@@ -35,6 +35,12 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>Iiosamap</string>
+	</array>
+	<key>NSLocationWhenInUseDescription</key>
+	<string>yes</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

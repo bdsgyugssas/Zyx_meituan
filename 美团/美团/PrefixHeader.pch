@@ -26,12 +26,18 @@
 
 //屏幕宽度
 #define ScreenW     [UIScreen mainScreen].bounds.size.width
+//高德地图key
+#define GaoDeKEY  @"5ba88d3d046afb5672bf0edcfba8c947"
 
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+Extension.h"
 #import "UIImage+Extension.h"
 #import "NSString+Extension.h"
+#import "UIColor+Extension.h"
+#import "Header.h"
 
 
+#define Lat 40.079675
+#define Lng 116.308090
 
 #endif /* PrefixHeader_pch */

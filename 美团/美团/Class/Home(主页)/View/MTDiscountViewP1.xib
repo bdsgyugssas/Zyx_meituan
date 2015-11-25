@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTDiscountViewP1">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-Er-fco">
+                    <rect key="frame" x="168" y="8" width="124" height="54"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzM-W7-Dam">
+                    <rect key="frame" x="8" y="8" width="81" height="31"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVP-8p-JL5">
+                    <rect key="frame" x="8" y="41" width="81" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bbb-Er-fco" secondAttribute="bottom" constant="8" id="5Sf-kK-4ts"/>
+                <constraint firstItem="JVP-8p-JL5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Ca9-xb-bSB"/>
+                <constraint firstItem="SzM-W7-Dam" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="CcI-Zp-PvA"/>
+                <constraint firstItem="JVP-8p-JL5" firstAttribute="top" secondItem="SzM-W7-Dam" secondAttribute="bottom" constant="2" id="PzU-xQ-g0c"/>
+                <constraint firstItem="SzM-W7-Dam" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Upb-6I-d5v"/>
+                <constraint firstItem="bbb-Er-fco" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="cAw-Y5-26l"/>
+                <constraint firstAttribute="trailing" secondItem="bbb-Er-fco" secondAttribute="trailing" constant="8" id="l9G-ii-Arb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="deputyTitle" destination="JVP-8p-JL5" id="JeP-yR-Wi8"/>
+                <outlet property="imageView" destination="bbb-Er-fco" id="uBb-Wp-rHG"/>
+                <outlet property="mainTitle" destination="SzM-W7-Dam" id="bhB-Mt-u3T"/>
+            </connections>
+            <point key="canvasLocation" x="345" y="308"/>
+        </view>
+    </objects>
+</document>

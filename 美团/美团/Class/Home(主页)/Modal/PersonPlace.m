@@ -6,8 +6,8 @@
 //  Copyright © 2015年 郑雨鑫. All rights reserved.
 //
 
-#import "City.h"
+#import "PersonPlace.h"
 
-@implementation City
+@implementation PersonPlace
 
 @end

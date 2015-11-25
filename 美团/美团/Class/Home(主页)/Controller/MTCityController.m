@@ -115,7 +115,6 @@
         cell.cityGroupF=self.cityGroupF;
         return cell;
     }else {
-
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier1];
         if (cell==nil) {
             cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier1];

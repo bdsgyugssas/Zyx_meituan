@@ -7,15 +7,10 @@
 //
 
 #import "MTMerchant.h"
-#import "MTLocationTool.h"
+
 
 @implementation MTMerchant
 
-- (double )distance
-{
-    MTLocationTool *tool=[MTLocationTool sharedLocationTool];
-    
-    return [tool distanceToCurrentplaceWithlongitude:self.lng latitude:self.lat]/1000;
-}
+
 
 @end

@@ -122,7 +122,8 @@
     MTMerchant *merchant=merchantF.merchant;
     
     self.photoView.frame=merchantF.photoViewF;
-    [self.photoView sd_setImageWithURL:[NSURL URLWithString:merchant.frontImg]];
+    NSString *str=[merchant.frontImg stringByReplacingOccurrencesOfString:@"w.h" withString:@"160.0"];
+    [self.photoView sd_setImageWithURL:[NSURL URLWithString:str]];
     
     self.nameLabel.frame=merchantF.nameLabelF;
     self.nameLabel.text=merchant.name;

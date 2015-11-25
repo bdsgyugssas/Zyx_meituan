@@ -12,4 +12,5 @@
 -(CGSize)sizeWithfont:(UIFont *)font;
 -(CGSize)sizeWithfont:(UIFont *)font MaxW:(CGFloat)maxW;
 
+-(UIColor *)colorOfxxxxxx;
 @end
