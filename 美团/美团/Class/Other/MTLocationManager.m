@@ -7,7 +7,6 @@
 //
 
 #import "MTLocationManager.h"
-#import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
 @interface MTLocationManager () <CLLocationManagerDelegate>
@@ -25,21 +24,27 @@
     manager.desiredAccuracy=kCLLocationAccuracyBest;
     manager.distanceFilter=100;
     self.manager=manager;
-    if ([UIDevice currentDevice].systemVersion.doubleValue>8.0) {
+    
+    if ([UIDevice currentDevice].systemVersion.doubleValue>=8.0) {
         [manager requestAlwaysAuthorization];
+        [manager requestWhenInUseAuthorization];
     }else{
         [manager startUpdatingLocation];
     }
     self.manager.delegate=self;
- 
 
 }
 
 #pragma mark -CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
+  
     switch (status) {
-        case kCLAuthorizationStatusNotDetermined:
+        case kCLAuthorizationStatusNotDetermined:{
+            [manager requestAlwaysAuthorization];
+            break;
+        }
+            
         case kCLAuthorizationStatusRestricted:
         case kCLAuthorizationStatusDenied: {
             NSLog(@"定位失败");
