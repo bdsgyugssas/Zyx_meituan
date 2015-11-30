@@ -38,12 +38,12 @@
     self.mnameLabel.text=shop.mname;
     
     self.mtitleLabel.text=[NSString stringWithFormat:@"[%@]%@",shop.range,shop.mtitle];
-    self.mtitleLabel.font=[UIFont systemFontOfSize:12];
+    self.mtitleLabel.font=[UIFont systemFontOfSize:10];
     self.mtitleLabel.textColor=RGB(200, 200, 200);
     self.mtitleLabel.numberOfLines=0;
     
     self.soldsLabel.text=[NSString stringWithFormat:@"已售%lld",shop.solds];
-    self.soldsLabel.font=[UIFont systemFontOfSize:12];
+    self.soldsLabel.font=[UIFont systemFontOfSize:10];
     self.soldsLabel.textColor=RGB(200, 200, 200);
 
     
@@ -55,7 +55,7 @@
 
     self.distanceLabel.text=[NSString stringWithFormat:@"%.1fKm",shop.distance];
     self.distanceLabel.textColor=RGB(200, 200, 200);
-    self.distanceLabel.font=[UIFont systemFontOfSize:12];
+    self.distanceLabel.font=[UIFont systemFontOfSize:10];
 
 
 

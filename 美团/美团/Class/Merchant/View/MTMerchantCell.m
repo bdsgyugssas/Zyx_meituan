@@ -109,8 +109,7 @@
         [distanceLabel setTextColor:RGB(189, 189, 189)];
         [self addSubview:distanceLabel];
         self.distanceLabel=distanceLabel;
-        
-        
+   
     }
     return self;
 

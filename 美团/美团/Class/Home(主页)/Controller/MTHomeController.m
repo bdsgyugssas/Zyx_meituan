@@ -384,7 +384,7 @@
         if (indexPath.row==0) {
             return 150;
         }else if (indexPath.row==1){
-            return 130;
+            return 120;
         }else if (indexPath.row==2){
             return 172;
         } 

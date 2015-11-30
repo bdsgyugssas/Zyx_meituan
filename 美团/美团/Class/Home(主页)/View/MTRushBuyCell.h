@@ -11,6 +11,7 @@
 @interface MTRushBuyCell : UITableViewCell
 
 + (instancetype)rushViewCellOfTableView:(UITableView *)tableView;
+
 @property (strong, nonatomic) NSArray *rushBuyShops;
 
 @property (strong, nonatomic) MTRushBuyEvent *event;

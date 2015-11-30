@@ -14,7 +14,7 @@
 {
     self=[super initWithFrame:frame];
     if (self) {
-        self.backgroundColor=[UIColor grayColor];
+        self.backgroundColor=RGB(200, 200, 200);
         UILabel *label=[[UILabel alloc]init];
         label.text=@"  猜你喜欢";
         label.font=[UIFont boldSystemFontOfSize:16];

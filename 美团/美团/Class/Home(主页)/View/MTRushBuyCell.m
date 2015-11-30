@@ -90,13 +90,17 @@
     NSInteger count=self.shops.count;
     
     CGFloat ViewW=self.width/count;
+    
     for (int i=0; i<count; i++) {
         MTRushBuyShopView *view=self.shops[i];
+        view.width=ViewW;
         view.x=i*ViewW;
         view.y=50;
+
+        
     }
     
-    self.activityView.frame=CGRectMake(10, 20, 150, 30);
+    self.activityView.frame=CGRectMake(10, 20, 130, 30);
     
     self.view1.frame=CGRectMake(0, 20, self.width, 30);
     

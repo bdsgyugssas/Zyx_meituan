@@ -16,37 +16,34 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJz-mv-ueg">
-                    <rect key="frame" x="8" y="8" width="42" height="32"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJz-mv-ueg" userLabel="主标题">
+                    <rect key="frame" x="8" y="8" width="42" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqS-Mz-ohD">
-                    <rect key="frame" x="8" y="41.5" width="42" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqS-Mz-ohD" userLabel="副标题">
+                    <rect key="frame" x="8" y="30" width="42" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iUW-5A-Wy2">
-                    <rect key="frame" x="228" y="8" width="64" height="54"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iUW-5A-Wy2" userLabel="图片">
+                    <rect key="frame" x="247" y="8" width="45" height="54"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="m5b-Y3-UmZ"/>
-                        <constraint firstAttribute="height" constant="54" id="sxc-ih-eNa"/>
-                        <constraint firstAttribute="width" constant="64" id="tZf-va-hoQ"/>
+                        <constraint firstAttribute="width" constant="45" id="krT-ga-kf6"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="nqS-Mz-ohD" firstAttribute="top" secondItem="ZJz-mv-ueg" secondAttribute="bottom" constant="2" id="BQ7-l5-vDN"/>
-                <constraint firstAttribute="trailing" secondItem="iUW-5A-Wy2" secondAttribute="trailing" constant="8" id="DDr-1u-DI3"/>
-                <constraint firstItem="ZJz-mv-ueg" firstAttribute="top" secondItem="vuR-NA-rBE" secondAttribute="top" constant="8" id="FjU-Ic-0cy"/>
-                <constraint firstItem="iUW-5A-Wy2" firstAttribute="bottom" secondItem="nqS-Mz-ohD" secondAttribute="bottom" id="a2R-KL-QAz"/>
-                <constraint firstItem="iUW-5A-Wy2" firstAttribute="top" secondItem="vuR-NA-rBE" secondAttribute="top" constant="8" id="dIn-3u-6p1"/>
-                <constraint firstAttribute="bottom" secondItem="iUW-5A-Wy2" secondAttribute="bottom" constant="8" id="ndi-Zb-Gz0"/>
-                <constraint firstItem="ZJz-mv-ueg" firstAttribute="leading" secondItem="vuR-NA-rBE" secondAttribute="leading" constant="8" id="tj6-O4-YcB"/>
-                <constraint firstItem="nqS-Mz-ohD" firstAttribute="leading" secondItem="vuR-NA-rBE" secondAttribute="leading" constant="8" id="zqt-0b-AvO"/>
+                <constraint firstItem="ZJz-mv-ueg" firstAttribute="leading" secondItem="vuR-NA-rBE" secondAttribute="leading" constant="8" id="ECM-Oy-TDq"/>
+                <constraint firstItem="nqS-Mz-ohD" firstAttribute="top" secondItem="ZJz-mv-ueg" secondAttribute="bottom" constant="1.5" id="S7f-ui-9wq"/>
+                <constraint firstAttribute="trailing" secondItem="iUW-5A-Wy2" secondAttribute="trailing" constant="8" id="U5P-Sh-jGG"/>
+                <constraint firstItem="nqS-Mz-ohD" firstAttribute="leading" secondItem="vuR-NA-rBE" secondAttribute="leading" constant="8" id="kcQ-vQ-3E0"/>
+                <constraint firstItem="iUW-5A-Wy2" firstAttribute="top" secondItem="vuR-NA-rBE" secondAttribute="top" constant="8" id="p5R-WM-K4i"/>
+                <constraint firstItem="ZJz-mv-ueg" firstAttribute="top" secondItem="vuR-NA-rBE" secondAttribute="top" constant="8" id="wbc-Bf-Hof"/>
+                <constraint firstAttribute="bottom" secondItem="iUW-5A-Wy2" secondAttribute="bottom" constant="8" id="yLi-X0-Cga"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
